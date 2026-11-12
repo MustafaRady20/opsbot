@@ -1,1 +1,17 @@
-/bin
+# Build output
+/bin/
+
+# Local config and secrets (commit config.example.yaml instead)
+.env
+config.yaml
+
+# Local data
+*.db
+*.db-shm
+*.db-wal
+
+# Test output
+coverage.out
+
+# Throwaway experiments
+/scratch/
