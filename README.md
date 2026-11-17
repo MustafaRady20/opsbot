@@ -9,9 +9,24 @@ Status: early development.
 
 - Go 1.27 or newer
 
-## Build and run
+## Build
 
 ```sh
-go build -o bin/opsbot ./...
-./bin/opsbot
+make build   # builds bin/opsbot with the version from git describe
+make test    # runs unit tests
+make lint    # checks gofmt and runs go vet
 ```
+
+## Usage
+
+| Command | What it does |
+| --- | --- |
+| `opsbot check` | Checks every target once, prints one line each, and exits 1 if any is down |
+| `opsbot version` | Prints the version |
+| `opsbot --help` | Lists commands and flags |
+
+Global flags:
+
+| Flag | Default | Meaning |
+| --- | --- | --- |
+| `--config` | `config.yaml` | Path to the config file (used from T04) |
