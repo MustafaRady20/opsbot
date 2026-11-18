@@ -1,7 +1,3 @@
-// Package cli defines opsbot's command-line interface.
-//
-// Commands only parse flags and arguments, call into other internal
-// packages, and print the results. They hold no business logic.
 package cli
 
 import "github.com/spf13/cobra"
